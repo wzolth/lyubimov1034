@@ -1,0 +1,87 @@
+<ng-container *ngIf="workers.length > 0">
+  <div class="row">
+    <div class="col-12">
+     <h5>{{title}}</h5>
+    
+      <table class="table" >
+     <script>
+      
+     </script>
+        <thead>
+          <tr >
+            <th scope="col" [style.width]=" '10%'" *ngIf="id1  == 1">
+              <button class="border-0 btn btn-info" (click)="Id_Down(); id1=2; age1 = 0">&uarr; #</button>
+          </th>
+          <th scope="col" [style.width]=" '10%'" *ngIf="id1 == 2">
+              <button class="border-0 btn btn-info" (click)="IdUp(); id1=1; age1 = 0">&darr;#</button>
+          </th>
+          <th scope="col" [style.width]=" '10%'" *ngIf="id1== 0">
+              <button class="border-0 btn btn-info" (click)="IdUp(); id1=1; age1 = 0">#</button>
+          </th>
+            
+            <th scope="col" [style.width]="'40%'">Наименование</th>
+            <th scope="col">Кол-во  </th>
+          
+
+
+            <!-- <th scope="col" [style.width]=" '200px'"  *ngIf="age1 == 1">
+              <button class="border-0 btn btn-info" (click)="Age_Down(); id1 = 0; age1=2;">&uarr; Возраст</button> 
+          </th>
+          <th scope="col" [style.width]=" '200px'"  *ngIf="age1 == 2">
+              <button class="btn btn-info" (click)="Age_Up();id1 = 0; age1=1; ">&darr; Возраст</button> 
+          </th>
+
+           <th></th> 
+          <th scope="col" [style.width]=" '200px'"  *ngIf="age1 == 0">
+              <button class="btn btn-info" (click)="Age_Up();id1 = 0; age1=1; "> Возраст</button> 
+          </th> -->
+            
+          <!-- <script>
+            window.onload = function() {
+             
+              alert("kek"); 
+            };
+            </script>  -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr  *ngFor="let worker of workers  | id: sort_Id : sort_age"  [style.background-color]="worker.number">
+            <th scope="row"  >&nbsp;{{ worker.id }}</th>
+            <td  >{{ worker.name }}</td>
+            <td>{{ worker.surname }}</td>
+            
+             
+            <td>
+              <button
+                class="btn btn-outline-danger btn-sm"
+                (click)="onDeleteWorker(worker.id)"
+              >
+                УДАЛИТЬ
+              </button>
+                <button
+              (click)="onChangeWorker1(worker)"
+                class="btn btn-outline-danger btn-sm"
+                
+                
+                
+              >
+                ИЗМЕНИТЬ
+              </button>  
+              <button
+              (click)="onBuy(worker)"
+                class="btn btn-outline-danger btn-sm"
+                [hidden]="worker.type"
+                
+                
+                
+              >
+                КУПИТЬ
+              </button> 
+          
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</ng-container>

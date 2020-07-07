@@ -1,0 +1,55 @@
+ <form [formGroup]= "form_workers" >
+   
+  <div class="row mb-3">
+    <div class="col-12">
+      <h5>Добавить покупку</h5>
+    </div>
+    <div class="col-4">
+      <input type="text" class="form-control" placeholder="Наименование" formControlName="name"/>
+      <div class="error"
+      *ngIf="(form_workers.get('name').touched && form_workers.get('name').invalid)">
+      <span class="badge badge-pill badge-danger">Поле не может быть пустым</span>
+     </div>
+    
+
+    </div>
+    <div class="col-4">
+      <input type="text" class="form-control" placeholder="Количество" formControlName="surname">
+   
+      <div class="error"
+      *ngIf="(form_workers.get('surname').touched && form_workers.get('surname').invalid)">
+      <span class="badge badge-pill badge-danger">Поле не может быть пустым</span>
+     </div>
+    </div>
+    <!-- <div class="col-3">
+      <input [textMask]="{mask: mask}" class="form-control" placeholder="Телефон" formControlName="number" />
+      <div class="error" *ngIf="((form_workers.get('number').touched) && (form_workers.get('number').invalid))">
+        <span class="badge badge-pill badge-danger">Поле не может быть пустым</span>
+      </div>
+    </div> -->
+    <!-- <div class="col-3">
+      <input type="email"#Mail aria-describedby="emailHelp" class="form-control" placeholder="Email" formControlName="email" />
+      <div class="error" *ngIf="((form_workers.get('email').touched) && (form_workers.get('email').invalid))">
+        <span class="badge badge-pill badge-danger">Поле не может быть пустым</span>
+      </div>
+    </div> -->
+    
+    <!-- <div class="col-3">
+      <input type="date" class="form-control" placeholder="Дата рождения" formControlName="date" max="2012-06-04" min="1920-05-29">
+      <div class="error" *ngIf="((form_workers.get('date').touched) && (form_workers.get('date').invalid))">
+        <span class="badge badge-pill badge-danger">Поле не может быть пустым</span>
+      </div>
+    </div> -->
+    <!-- <div class="col-4">
+      <select class="custom-select" [(ngModel)]="type"  [ngModelOptions]="{standalone: true}">
+        <option [ngValue]="myWorkerType.buy">Куплено</option>
+        <option [ngValue]="myWorkerType.notbuy">Некуплено</option>
+       
+      </select>
+    </div> -->
+    
+    <div class="col-12 mt-1">
+      <button class="btn btn-outline-primary btn-sm" (click)="onAddWorker()" [hidden]="form_workers.invalid" >Add</button>
+    </div>
+  </div>
+ </form>

@@ -1,0 +1,39 @@
+{
+  "workers": [
+    {
+      "name": "Я",
+      "surname": "13",
+      "type": 1,
+      "number": "white",
+      "id": 45
+    },
+    {
+      "name": "Яв",
+      "surname": "12",
+      "type": 1,
+      "number": "white",
+      "id": 46
+    },
+    {
+      "name": "А",
+      "surname": "2",
+      "type": 0,
+      "number": "#9aff4e",
+      "id": 52
+    },
+    {
+      "name": "Жз",
+      "surname": "4",
+      "type": 1,
+      "number": "white",
+      "id": 56
+    },
+    {
+      "name": "Продукт34",
+      "surname": "3",
+      "type": 0,
+      "number": "#a9ff77",
+      "id": 58
+    }
+  ]
+}

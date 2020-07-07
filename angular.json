@@ -24,7 +24,10 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
+            
             ],
             "scripts": []
           },
@@ -119,6 +122,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "lyubimov1034"
+    }
+  },
+  "defaultProject": "lyubimov1034",
+  "cli": {
+    "analytics": "991f9754-4dc5-4e47-8c6d-ea637d03ab4d"
+  }
 }
